@@ -63,7 +63,7 @@ export const filterList = [
     containerClass: "mt-1",
     selectClass: "bg-gray-50",
     search: true,
-    options: [{ title: "Todos", value: "" }].concat(arrayOfPrices(300000, 0)),
+    options: [{ title: "Todos", value: "" }, arrayOfPrices(300000, 0)],
   },
   {
     title: "Año",
@@ -72,7 +72,7 @@ export const filterList = [
     containerClass: "mt-1",
     selectClass: "bg-gray-50",
     search: true,
-    options: [{ title: "Todos", value: "" }].concat(arrayOfLastYears(80)),
+    options: [{ title: "Todos", value: "" }, arrayOfLastYears(80)],
   },
   {
     title: "Transmisión",
