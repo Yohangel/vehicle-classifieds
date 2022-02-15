@@ -6,7 +6,7 @@ import React from 'react';
 import { addFilter } from 'redux/actions/filtersAction';
 import { store } from 'redux/store';
 
-const filters: Array<FilterModel> = filterList
+const filters = filterList
 
 export function FilterList() {
   const [showFilters, setShowFilters] = React.useState(false)

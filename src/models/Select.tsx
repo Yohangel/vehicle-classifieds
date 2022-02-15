@@ -1,5 +1,5 @@
 export interface SelectModel {
-  options: Array<SelectOptionModel>
+  options: Array<any>
   onChange: any
   title?: string
   containerClass?: string
