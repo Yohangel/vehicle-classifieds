@@ -79,14 +79,14 @@ export function Select(props: SelectModel) {
         </div>
       </div>
       <div
-        className={
-          "absolute z-50 backdrop-blur-sm py-4 pl-2 pr-2 bg-[#00000015] w-full lg:pr-0" +
-          (show ? "" : " invisible") +
-          (elem &&
-            (botside
-              ? ` bottom-[${elem.offsetHeight}px] `
-              : ` top-[${elem.offsetHeight}px] `))
-        }
+        className={`absolute z-50 backdrop-blur-sm py-4 pl-2 pr-2 bg-[#00000015] w-full lg:pr-0
+         ${show ? "" : " invisible"}
+         ${
+           elem &&
+           (botside
+             ? "bottom-[" + elem.offsetHeight + "px]"
+             : "top-[" + elem.offsetHeight + "px]")
+         }`}
       >
         <div className="overflow-y-scroll  max-h-52">
           {select.search && (

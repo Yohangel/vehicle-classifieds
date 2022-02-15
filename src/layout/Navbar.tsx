@@ -99,10 +99,9 @@ export function Navbar() {
             {menuItems.map((item) => (
               <div
                 key={"navDesk-" + item.name}
-                className={
-                  (asPath == item.href && "font-bold") +
-                  " cursor-pointer border-2 m-2  rounded-lg p-4 bg-white hover:bg-gray-100"
-                }
+                className={`${
+                  asPath == item.href && "font-bold"
+                } cursor-pointer border-2 m-2  rounded-lg p-4 bg-white hover:bg-gray-100`}
               >
                 <Link href={item.href}>{item.name}</Link>
               </div>
