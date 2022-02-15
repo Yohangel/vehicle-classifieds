@@ -50,15 +50,19 @@ export function Select(props: SelectModel) {
   }
 
   return (
-    <div ref={ref} className={"w-full relative " + select.containerClass}>
+    <div
+      ref={ref}
+      className={`w-full relative ${
+        select.containerClass && select.containerClass
+      }`}
+    >
       <div className="relative">
         <div
           tabIndex={0}
           onClick={() => toggleSelect(!show)}
-          className={
-            "bg-white w-full px-3 py-2 shadow-sm rounded-md select-none cursor-pointer " +
-            select.selectClass
-          }
+          className={` w-full px-3 py-2 shadow-sm rounded-md select-none cursor-pointer ${
+            select.selectClass && select.selectClass
+          }`}
         >
           {select.title && (
             <span className="font-semibold">{select.title}:</span>

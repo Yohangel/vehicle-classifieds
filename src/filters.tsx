@@ -6,7 +6,7 @@ export const filterList = [
     name: "orderBy",
     type: "select",
     containerClass: "mt-2",
-    selectClass: "",
+    selectClass: "bg-white",
     search: false,
     options: [
       { title: "Precio ↓", value: "priceDesc", default: false },
@@ -20,7 +20,7 @@ export const filterList = [
     type: "select",
     name: "city",
     containerClass: "mt-2",
-    selectClass: "",
+    selectClass: "bg-white",
     search: true,
     options: [
       { title: "Todos", value: "", default: false },
@@ -36,7 +36,7 @@ export const filterList = [
     type: "select",
     name: "mark",
     containerClass: "mt-2",
-    selectClass: "",
+    selectClass: "bg-white",
     search: true,
     options: [
       { title: "Todos", value: "", default: false },
@@ -48,7 +48,7 @@ export const filterList = [
     type: "select",
     name: "model",
     containerClass: "mt-2",
-    selectClass: "",
+    selectClass: "bg-white",
     search: true,
     options: [
       { title: "Todos", value: "", default: false },
@@ -63,7 +63,7 @@ export const filterList = [
     containerClass: "mt-1",
     selectClass: "bg-gray-50",
     search: true,
-    options: [{ title: "Todos", value: "" }, arrayOfPrices(300000, 0)],
+    options: [{ title: "Todos", value: "" }].concat(arrayOfPrices(300000, 0)),
   },
   {
     title: "Año",
@@ -72,14 +72,14 @@ export const filterList = [
     containerClass: "mt-1",
     selectClass: "bg-gray-50",
     search: true,
-    options: [{ title: "Todos", value: "" }, arrayOfLastYears(80)],
+    options: [{ title: "Todos", value: "" }].concat(arrayOfLastYears(80)),
   },
   {
     title: "Transmisión",
     type: "select",
     name: "transmision",
     containerClass: "mt-2",
-    selectClass: "",
+    selectClass: "bg-white",
     search: false,
     options: [
       { title: "Todos", value: "", default: false },

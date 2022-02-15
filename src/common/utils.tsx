@@ -27,7 +27,7 @@ export const filterByValue = (array: Array<any>, string: string) => {
 export const range = (start: number, stop: number, step: number, title: any) =>
   Array.from({ length: (stop - start) / step + 1 }, (_, i) => {
     const elem = start + i * step
-    return { title: title(elem), value: elem }
+    return { title: title(elem).toString(), value: elem.toString() }
   })
 
 export const arrayOfLastYears = (yearsToShow: number) => {

@@ -70,7 +70,7 @@ export function FilterList() {
                     title="Hasta"
                     options={sortArray(filter.options, "asc")}
                     containerClass="mt-1"
-                    selectClass="bg-gray-50"
+                    selectClass={filter.selectClass}
                     search={filter.search}
                     onChange={(e: any) => console.log(filter.name + "To", e)}
                   />
