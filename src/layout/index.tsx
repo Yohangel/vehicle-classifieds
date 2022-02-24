@@ -21,7 +21,7 @@ export function Layout(props: {
 
       <main>
         <Navbar />
-        <div className="px-5 py-3 mb-5 text-center text-sm w-full  bg-teal-100">
+        <div className="px-5 py-3 text-center text-sm w-full  bg-teal-100">
           ¿Deseas publicar tu vehículo?{" "}
           <span className="underline font-semibold">Aprende cómo</span>
         </div>

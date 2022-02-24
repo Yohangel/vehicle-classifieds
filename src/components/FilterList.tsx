@@ -1,5 +1,5 @@
 import { arrayOfLastYears, arrayOfPrices, sortArray } from 'common/utils';
-import { Search, Select } from 'components';
+import { Button, Search, Select } from 'components';
 import { filterList } from 'filters';
 import { FilterModel } from 'models';
 import React from 'react';
@@ -22,31 +22,34 @@ export function FilterList() {
   }
   return (
     <>
-      <button
+      <Button
         onClick={() => toggleFilters()}
-        className={`mb-5 w-full rounded-md text-xs p-2 font-semibold items-center text-white bg-teal-600 hover:font-bold hover:shadow-lg md:hidden`}
+        style="secondary"
+        extraClass="md:hidden mb-5 w-full text-white justify-center  bg-gradient-to-b from-teal-500 bg-teal-600"
       >
         Ver filtros
-      </button>
+      </Button>
       <div
         className={
           (showFilters ? "fixed" : "hidden") +
-          " p-5 z-50 bg-gray-100 w-full h-full top-0 left-0 md:p-0   sm: md:relative md:block  md:z-0"
+          " p-5 z-50 bg-gray-100 w-full h-full top-0 left-0 md:p-0  overflow-y-auto sm: md:relative md:block  md:z-0"
         }
       >
-        <button
+        <Button
           onClick={() => toggleFilters()}
-          className={`mb-5 w-full rounded-md text-xs p-2 font-semibold items-center text-white bg-teal-600 hover:font-bold hover:shadow-lg md:hidden`}
+          style="secondary"
+          extraClass="md:hidden mb-5 w-full text-white justify-center  bg-gradient-to-b from-teal-500 bg-teal-600"
         >
           Cerrar filtros
-        </button>
-        {false && (
-          <button
+        </Button>
+        {true && (
+          <Button
             onClick={() => toggleFilters()}
-            className={`mt-5 w-full rounded-md text-xs p-2 font-semibold items-center text-white bg-red-600 hover:font-bold hover:shadow-lg`}
+            style="secondary"
+            extraClass="md:hidden mb-5 py-2 w-full text-white justify-center  bg-gradient-to-b from-red-500 bg-red-600"
           >
-            Limpiar filtros
-          </button>
+            Ver filtros
+          </Button>
         )}
         <Search />
         {filters.map((filter) => {

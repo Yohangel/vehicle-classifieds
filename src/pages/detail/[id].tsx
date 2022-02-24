@@ -20,7 +20,7 @@ const Detail: NextPage = () => {
 
   return (
     <Layout pageName={`${car.make} ${car.model} ${car.year}`}>
-      <div className={`px-5 pb-5 max-w-screen-2xl`}>
+      <div className={`md:px-5 py-5 max-w-screen-2xl`}>
         <div className="bg-white ">
           <VehicleDetail car={car} />
         </div>

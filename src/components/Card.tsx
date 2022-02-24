@@ -39,12 +39,12 @@ export function Card(props: { car: CarModel }) {
   return (
     <>
       <div
-        className={`bg-white select-none cursor-pointer w-full block shadow-sm rounded-md hover:shadow-lg`}
+        className={`bg-white select-none cursor-pointer w-full block shadow-sm md:rounded-md md:hover:shadow-lg`}
       >
-        <div className={`bg-black rounded-t-md`}>
+        <div className={`bg-black md:rounded-t-md`}>
           <Carousel
             images={car.img}
-            imgClass="rounded-t-md"
+            imgClass="md:rounded-t-md"
             onClick={handleClick}
           />
         </div>

@@ -83,7 +83,7 @@ export function Select(props: SelectModel) {
         </div>
       </div>
       <div
-        className={`absolute z-50 backdrop-blur-sm py-4 pl-2 pr-2 bg-[#00000015] w-full lg:pr-0
+        className={`absolute z-50 backdrop-blur-sm py-2 pl-2 pr-2 my-2 rounded-md bg-gray-300 w-full lg:pr-0
          ${show ? "" : " invisible"}
          ${
            elem &&
@@ -97,7 +97,7 @@ export function Select(props: SelectModel) {
             <div className="w-full">
               <input
                 type="search"
-                className="w-full rounded-md shadow-md mb-2 appearance-none outline-none bg-white text-gray-400 text-sm p-2"
+                className="w-full rounded-md shadow-md mb-2 appearance-none outline-none bg-white text-gray-400 placeholder-gray-500 focus:placeholder-gray-300 hover:placeholder-gray-300 text-sm p-2"
                 placeholder={"Buscar " + (select.title && select.title) + "..."}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -109,10 +109,7 @@ export function Select(props: SelectModel) {
               key={option.value}
               onClick={() => changeSelected(option)}
               style={selected === option ? "primary" : "secondary"}
-              extraClass={
-                "w-full px-2 py-1.5 text-left text-sm mt-1" +
-                (selected === option ? " font-semibold" : " font-normal")
-              }
+              extraClass="w-full px-2 py-2 text-left text-sm mt-1 border-0"
             >
               {option.title}
             </Button>
